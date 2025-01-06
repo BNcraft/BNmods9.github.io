@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Mods - BNcraft</title>
+    <style>
+        body {
+            background-color: #001F2F;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #002F3F;
+            border-bottom: 2px solid #00FFFF;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .search-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            background-color: #002F3F;
+            border: 2px solid #00FFFF;
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar::placeholder {
+            color: #00FFFF;
+        }
+
+        .search-bar:focus {
+            border-color: #00CED1;
+            background-color: #001F2F;
+        }
+
+        .mods-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .mod-item {
+            background-color: #002F3F;
+            border: 2px solid #00FFFF;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .mod-item:hover {
+            transform: scale(1.05);
+        }
+
+        .mod-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .mod-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00FFFF;
+            margin-bottom: 10px;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00FFFF;
+            color: #002F3F;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #00CED1;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #002F3F;
+            color: #00FFFF;
+            padding: 10px;
+            font-size: 12px;
+            border-top: 2px solid #00FFFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/bitmap8999628725919376688.png" alt="Logo">
+        <div class="title">All Mods - BNcraft</div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" class="search-bar" id="search-bar" placeholder="Search for mods..." onkeyup="filterMods()">
+    </div>
+
+    <div class="mods-container" id="mods-container">
+        <!-- Modlar burada listelenecek -->
+        <div class="mod-item" data-name="Actions & Stuff (Texture Pack)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/actionsandstuff-thumbnail-0-copy-800x450_orig.jpg" alt="Actions & Stuff">
+            <div class="mod-title">Actions & Stuff (Texture Pack)</div>
+            <a href="https://lootdest.org/s?nc4bVpwI" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Villagers++ (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/villagers-thumbnail-0-orig-copy-800x450_orig.jpg" alt="Villagers++">
+            <div class="mod-title">Villagers++ (Add-On)</div>
+            <a href="https://lootdest.org/s?1AHUxjHP" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Realistic Biomes (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/realisticbiomes-thumbnail-0_orig.jpg" alt="Realistic Biomes">
+            <div class="mod-title">Realistic Biomes (Add-On)</div>
+            <a href="https://loot-link.com/s?HXrawDnI" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Animations+ (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/a-thumbnail-0_orig.jpg" alt="Animations+">
+            <div class="mod-title">Animations+ (Add-On)</div>
+            <a href="https://loot-link.com/s?UUrpUAgN" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Radium's Armament (Add-On)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/picsart-25-01-01-14-41-26-492-copy-1280x750_orig.jpg" alt="Radium's Armament">
+            <div class="mod-title">Radium's Armament (Add-On)</div>
+            <a href="https://loot-link.com/s?qFXJR28M" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="ANIME JUTSU (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/animejutsu-thumbnail-0_orig.jpg" alt="ANIME JUTSU">
+            <div class="mod-title">ANIME JUTSU (Add-On)</div>
+            <a href="https://lootdest.org/s?dDtQ8MzI" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="BLASTERS (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/blasters-thumbnail-0_orig.jpg" alt="BLASTERS">
+            <div class="mod-title">BLASTERS (Add-On)</div>
+            <a href="https://loot-link.com/s?f9TgA6US" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="BOSSES+ (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/bpl-thumbnail-0_orig.jpg" alt="BOSSES+">
+            <div class="mod-title">BOSSES+ (Add-On)</div>
+            <a href="https://lootdest.org/s?NVsmppYI" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="CAVE DWELLER (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/cavedweller-thumbnail-0_orig.jpg" alt="CAVE DWELLER">
+            <div class="mod-title">CAVE DWELLER (Add-On)</div>
+            <a href="https://lootdest.org/s?z0fqRAhk" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Skibidi Toilet Raids (Add-On)">
+            <img src="https://d1wzdj81h1hubn.cloudfront.net/resources/42816341d366cef4.jpeg" alt="Skibidi Toilet Raids">
+            <div class="mod-title">Skibidi Toilet Raids (Add-On)</div>
+            <a href="https://lootdest.org/s?dsakyDLk" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Smartphones (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/screenshot-2024-12-21-12-30-55-903-com-miui-gallery-orig-copy-800x450_orig.png" alt="Smartphones">
+            <div class="mod-title">Smartphones (Add-On)</div>
+            <a href="https://loot-link.com/s?S4BSgKgq" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Towers and Dungeons (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/towersanddungeons-thumbnail-0_orig.jpg" alt="Towers and Dungeons">
+            <div class="mod-title">Towers and Dungeons (Add-On)</div>
+            <a href="https://lootdest.org/s?i0Ea7Z3q" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Black x Gold (Skin Pack)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/save-20250105-061920-copy-800x450_orig.jpg" alt="Black x Gold">
+            <div class="mod-title">Black x Gold (Skin Pack)</div>
+            <a href="https://lootdest.org/s?gZMUJM24" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Anime Weapons (Template)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/animeweapons-thumbnail-0_orig.jpg" alt="Anime Weapons">
+            <div class="mod-title">Anime Weapons (Template)</div>
+            <a href="https://lootdest.org/s?rVYZJ363" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="MarsCraft (Template)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/img-20250104-wa0093-1_orig.jpg" alt="MarsCraft">
+            <div class="mod-title">MarsCraft (Template)</div>
+            <a href="https://lootdest.org/s?HrL4ESpA" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="ZOMBIES (Template)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/img-20250104-wa0101-copy-800x450_orig.jpg" alt="ZOMBIES">
+            <div class="mod-title">ZOMBIES (Template)</div>
+            <a href="https://loot-link.com/s?jQfipBsx" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Dragons (Add-On)">
+            <img src="https://bnmodsland.weebly.com/uploads/1/5/1/5/151513783/dragons-thumbnail-0_orig.jpg" alt="Dragons">
+            <div class="mod-title">Dragons (Add-On)</div>
+            <a href="https://lootdest.org/s?uBUuIbts" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="THE EXPLORER'S WAYSTONES (Add-On)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/explorerswaystones-thumbnail-0-copy-800x450_orig.jpg" alt="THE EXPLORER'S WAYSTONES">
+            <div class="mod-title">THE EXPLORER'S WAYSTONES (Add-On)</div>
+            <a href="https://loot-link.com/s?WmxkoEuF" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="ULTRA Mob Totems (Add-On)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/img-20241231-wa0017_orig.jpg" alt="ULTRA Mob Totems">
+            <div class="mod-title">ULTRA Mob Totems (Add-On)</div>
+            <a href="https://lootdest.org/s?Q5IJ2Ujx" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Advanced Dragons (Template)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/img-20250105-wa0007-1_orig.jpg" alt="Advanced Dragons">
+            <div class="mod-title">Advanced Dragons (Template)</div>
+            <a href="https://lootdest.org/s?ePoe1dnW" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Black (Skin Pack)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/save-20250105-081914_orig.jpg" alt="Black">
+            <div class="mod-title">Black (Skin Pack)</div>
+            <a href="https://loot-link.com/s?WMusVXSG" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Hafen (Texture Pack)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/img-20241229-wa0158_orig.jpg" alt="Hafen">
+            <div class="mod-title">Hafen (Texture Pack)</div>
+            <a href="https://lootdest.org/s?Va81R97o" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Ender Ghosts (Skin Pack)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/save-20250105-085753_orig.jpg" alt="Ender Ghosts">
+            <div class="mod-title">Ender Ghosts (Skin Pack)</div>
+            <a href="https://lootdest.org/s?njPb1tqv" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="Pumpkin Halloween (Texture Pack)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/img-20241228-wa0173_orig.jpg" alt="Pumpkin Halloween">
+            <div class="mod-title">Pumpkin Halloween (Texture Pack)</div>
+            <a href="https://lootdest.org/s?1xuoDioX" class="download-button" target="_blank">Download</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 BNcraft. All rights reserved.
+    </footer>
+
+    <script>
+        function filterMods() {
+            const searchInput = document.getElementById('search-bar').value.toLowerCase();
+            const modsContainer = document.getElementById('mods-container');
+            const mods = modsContainer.getElementsByClassName('mod-item');
+
+            for (let i = 0; i < mods.length; i++) {
+                const modName = mods[i].getAttribute('data-name').toLowerCase();
+                if (modName.includes(searchInput)) {
+                    mods[i].style.display = '';
+                } else {
+                    mods[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
