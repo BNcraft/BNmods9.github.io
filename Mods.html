@@ -1,46 +1,189 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BN Craft</title>
+    <title>Home Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            text-align: center;
+            background-color: #001F2F;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            text-align: center;
         }
+
         header {
-            background-color: #007acc;
-            color: white;
-            padding: 1rem 0;
+            padding: 20px;
+            background-color: #002F3F;
+            border-bottom: 2px solid #00FFFF;
         }
-        main {
-            padding: 2rem;
+
+        header img {
+            max-width: 150px;
+            height: auto;
         }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Arama Çubuğu */
+        .search-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            background-color: #002F3F;
+            border: 2px solid #00FFFF;
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar::placeholder {
+            color: #00FFFF;
+        }
+
+        .search-bar:focus {
+            border-color: #00CED1;
+            background-color: #001F2F;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        .all-mods-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 50px;
+            background-color: #00FFFF;
+            color: #002F3F;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .all-mods-button:hover {
+            transform: scale(1.05);
+            background-color: #00CED1;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            background-color: #002F3F;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 50px;
+            background-color: #00FFFF;
+            color: #002F3F;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+            background-color: #00CED1;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.1);
+        }
+
         footer {
-            background-color: #003f5c;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            background-color: #002F3F;
+            color: #00FFFF;
+            padding: 10px;
+            font-size: 12px;
+            border-top: 2px solid #00FFFF;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>BNcraft Resmi Sitesi</h1>
+        <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/bitmap8999628725919376688.png" alt="Logo">
+        <div class="title">Welcome to BNcraft</div>
     </header>
-    <main>
-        <h2>Hoş geldiniz!</h2>
-        <p>Bu sayfa, GitHub Pages ile yayınlandı.</p>
-    </main>
+
+    <!-- Arama Çubuğu -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+
+    <div class="container">
+        <!-- All Mods Butonu -->
+        <div class="all-mods-button">All Mods</div>
+
+        <div class="grid-container">
+            <div class="grid-item">Add-ons</div>
+            <div class="grid-item">Templates</div>
+            <div class="grid-item">Texture Packs</div>
+            <div class="grid-item">Skin Packs</div>
+        </div>
+
+        <div class="social-links">
+            <!-- Discord logo (no link yet) -->
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988200073_orig.png" alt="Discord Logo">
+
+            <!-- YouTube logo (no link yet) -->
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988111224_orig.png" alt="YouTube Logo">
+
+            <!-- Tiktok logo (no link yet) -->
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988057347_orig.png" alt="Tiktok Logo">
+        </div>
+    </div>
+    
     <footer>
-        <p>© 2025 BNcraft. Tüm hakları saklıdır.</p>
+        &copy; 2025 Your Website. All rights reserved.
     </footer>
 </body>
 </html>
