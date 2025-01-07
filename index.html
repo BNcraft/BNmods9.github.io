@@ -81,6 +81,7 @@
             transition: transform 0.3s, background-color 0.3s;
             margin-bottom: 20px;
             margin-top: 20px;
+            text-decoration: none;
         }
 
         .all-mods-button:hover {
@@ -127,15 +128,43 @@
             margin-top: 20px;
         }
 
-        .social-links img {
+        .social-links a img {
             width: 40px;
             height: 40px;
             cursor: pointer;
             transition: transform 0.3s;
         }
 
-        .social-links img:hover {
+        .social-links a img:hover {
             transform: scale(1.1);
+        }
+
+        .discord-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: #002F3F;
+            padding: 15px;
+            border: 2px solid #00FFFF;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .discord-banner img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .discord-banner a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #00FFFF;
+            font-weight: bold;
+        }
+
+        .discord-banner a span {
+            color: yellow;
         }
 
         footer {
@@ -169,15 +198,24 @@
             <div class="grid-item">Skin Packs</div>
         </div>
 
+        <!-- Discord Banner -->
+        <div class="discord-banner">
+            <img src="https://cdn.icon-icons.com/icons2/3169/PNG/512/discord_logo_icon_193568.png" alt="Discord Logo">
+            <a href="https://discord.gg/feU8DERptY" target="_blank">
+                Join our Discord for <span>secret</span> mods!
+            </a>
+        </div>
+
         <div class="social-links">
-            <!-- Discord logo -->
-            <a href="https://discord.gg/QhHmRujprk"><img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988200073_orig.png" alt="Discord Logo"></a>
-
-            <!-- YouTube logo -->
-            <a href="https://youtube.com/@bncraft.1?si=tNO8FJ_KOdEiMSaE"><img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988111224_orig.png" alt="YouTube Logo"></a>
-
-            <!-- Tiktok logo -->
-            <a href="https://www.tiktok.com/@bn.craft4?_t=ZS-8spPCe73WNd&_r=1"><img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988057347_orig.png" alt="Tiktok Logo"></a>
+            <a href="https://discord.gg/feU8DERptY" target="_blank">
+                <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988200073_orig.png" alt="Discord Logo">
+            </a>
+            <a href="https://youtube.com/@bncraft.1?si=Y2G0-CESwI4BSBz1" target="_blank">
+                <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988111224_orig.png" alt="YouTube Logo">
+            </a>
+            <a href="https://www.tiktok.com/@bn.craft4?_t=ZS-8srA8CzQApE&_r=1" target="_blank">
+                <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/1735988057347_orig.png" alt="TikTok Logo">
+            </a>
         </div>
     </div>
     
