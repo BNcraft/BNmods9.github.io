@@ -53,8 +53,8 @@
 
         .unlock-button:hover {
             background-color: #00CED1;
-            transform: scale(1.1);
-            box-shadow: 0 0 20px #00FFFF;
+            transform: scale(1.05); /* Reduced scaling */
+            box-shadow: 0 0 15px #00FFFF; /* Reduced glow */
         }
 
         .popup {
@@ -76,7 +76,7 @@
 
         .popup.show {
             display: block;
-            transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(0.8); /* Reduced scaling */
             opacity: 1;
         }
 
@@ -132,8 +132,8 @@
         }
 
         .social-links a img:hover {
-            transform: scale(1.2);
-            filter: brightness(2);
+            transform: scale(1.05); /* Reduced scaling */
+            filter: brightness(1.5); /* Reduced brightness */
         }
     </style>
 </head>
