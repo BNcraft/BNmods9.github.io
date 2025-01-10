@@ -374,4 +374,42 @@
         <div class="mod-item" data-name="Core Armor (Skin Pack)">
             <img src="https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/7e82c37c-c759-4f1e-a605-990c14dbba46/CoreArmor_Thumbnail_0.jpg" alt="Core Armor">
             <div class="mod-title">Core Armor (Skin Pack)</div>
-            <a href="https://loot-link.com/s?d2u4SAnO" class="download-button" target="_
+            <a href="https://loot-link.com/s?d2u4SAnO" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="RealismCraft (Template)">
+            <img src="https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/77298d88-d2d0-4819-a33d-020df6469882/RealismCraft_Thumbnail_0.jpg" alt="RealismCraft">
+            <div class="mod-title">RealismCraft (Template)</div>
+            <a href="https://loot-link.com/s?ct7edLXP" class="download-button" target="_blank">Download</a>
+        </div>
+
+        <div class="mod-item" data-name="DRAGONS (Add-On)">
+            <img src="https://bncraft9.weebly.com/uploads/1/5/1/8/151839741/img-20250103-wa0029_orig.jpg" alt="DRAGONS">
+            <div class="mod-title">DRAGONS (Add-On)</div>
+            <a href="https://loot-link.com/s?PbHAVp71" class="download-button" target="_blank">Download</a>
+        </div>
+        
+    </div>
+
+    <footer>
+        &copy; 2025 BNcraft. All rights reserved.
+    </footer>
+
+    <script>
+        function filterMods() {
+            const searchInput = document.getElementById('search-bar').value.toLowerCase();
+            const modsContainer = document.getElementById('mods-container');
+            const mods = modsContainer.getElementsByClassName('mod-item');
+
+            for (let i = 0; i < mods.length; i++) {
+                const modName = mods[i].getAttribute('data-name').toLowerCase();
+                if (modName.includes(searchInput)) {
+                    mods[i].style.display = '';
+                } else {
+                    mods[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
