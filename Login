@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #001F2F;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .login-box {
+            background-color: #002F3F;
+            border: 2px solid #00FFFF;
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #00FFFF;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #00FFFF;
+            border-radius: 8px;
+            background-color: #001F2F;
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+
+        .login-box input::placeholder {
+            color: #00FFFF;
+        }
+
+        .login-box input:focus {
+            border-color: #00CED1;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00FFFF;
+            color: #002F3F;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .login-box button:hover {
+            background-color: #00CED1;
+            transform: scale(1.05);
+        }
+
+        .google-login {
+            margin-top: 10px;
+        }
+
+        .google-login a {
+            color: #00FFFF;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .forgot-password {
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            color: #00FFFF;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="Username or Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="google-login">
+                <a href="#">Login with Google</a>
+            </div>
+            <div class="forgot-password">
+                <a href="/forgot-password">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
